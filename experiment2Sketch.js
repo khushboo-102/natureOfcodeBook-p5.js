@@ -1,22 +1,28 @@
  
 
-let rectY = 400; // Initial Y position of the rectangle
+let rectX = 0; // Initial Y position of the rectangle
 let speed = 5; // Speed of the rectangle
 
 function setup() {
-  createCanvas(1800, 900); // Create a canvas of 400x400
+  createCanvas(1850, 950); // Create a canvas of 400x400
 }
 
 function draw() {
-  background("pink"); // Clear the background
+  background(173,204,255); // Clear the background
   
-  fill(100, 200, 255); // Set rectangle color
-  rect(900, rectY, 100, 50); // Draw the rectangle (x, y, width, height)
+  fill(178, 102, 255); // Set rectangle color
+  rect(rectX, 400, 100, 50); // Draw the rectangle (x, y, width, height)
 
-  rectY -= speed; // Move the rectangle upword
+  rectX += speed; // Move the rectangle rightside word
 
   // If the rectangle moves beyond the canvas height, reset to the top
-  if ( rectY<0)    {
-    rectY = height;
+  if ( rectX>width)    {
+    rectX = 0;
   }
-}   
+}  
+
+// //Heading
+// textSize(30)
+// // fill("pink")
+// stroke("pink")
+// text("move rectangle right side" ,600,200)
